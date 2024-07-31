@@ -50,7 +50,7 @@ This Flutter app demonstrates a scrolling table with fixed central columns, "Str
 
 ## 🎥 Video Recording
 
-Please find the video showcasing the scrolling functionality [here](link-to-your-video). 
+Please find the video showcasing the scrolling functionality [here](https://drive.google.com/file/d/1EBjx-fuw91xZFLFO6sleRdSrY9FCyD6A/view?usp=drive_link). 
 
 ## 📄 Note
 
