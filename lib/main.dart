@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:table_app/my_homepage.dart';
+
 import 'package:table_app/splash_screen.dart';
 
 void main() {

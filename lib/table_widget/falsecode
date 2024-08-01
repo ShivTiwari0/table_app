@@ -1,0 +1,19 @@
+_controller1.addListener(() {
+      if (_controller1.hasClients && !_isScrolling) {
+        _isScrolling = true;
+        if (_controller2.hasClients) {
+          _controller2.jumpTo(_controller1.offset);
+        }
+        _isScrolling = false;
+      }
+    });
+
+    _controller2.addListener(() {
+      if (_controller2.hasClients && !_isScrolling) {
+        _isScrolling = true;
+        if (_controller1.hasClients) {
+          _controller1.jumpTo(_controller2.offset);
+        }
+        _isScrolling = false;
+      }
+    });

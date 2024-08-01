@@ -20,26 +20,24 @@ class _MyHomepageState extends State<MyHomepage> {
   @override
   void initState() {
     super.initState();
-
     _controller1.addListener(() {
-      if (_controller1.hasClients && !_isScrolling) {
-        _isScrolling = true;
-        if (_controller2.hasClients) {
-          _controller2.jumpTo(_controller1.offset);
-        }
+      if(!_isScrolling){
+        _isScrolling =true;
+        _controller2.jumpTo(_controller1.position.maxScrollExtent - _controller1.position.pixels);
         _isScrolling = false;
       }
-    });
 
-    _controller2.addListener(() {
-      if (_controller2.hasClients && !_isScrolling) {
-        _isScrolling = true;
-        if (_controller1.hasClients) {
-          _controller1.jumpTo(_controller2.offset);
-        }
+    },);
+ 
+     _controller2.addListener(() {
+      if(!_isScrolling){
+        _isScrolling =true;
+        _controller1.jumpTo(_controller2.position.maxScrollExtent - _controller2.position.pixels);
         _isScrolling = false;
       }
-    });
+
+    },);
+    
   }
 
   @override

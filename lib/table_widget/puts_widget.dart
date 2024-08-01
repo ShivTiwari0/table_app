@@ -70,10 +70,9 @@ class PutsWidget extends StatelessWidget {
       chngChngPct: ["14%", "-2%"],
       ltp: "25300",
     ),
- 
   ];
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       controller: controller2,
@@ -83,11 +82,11 @@ class PutsWidget extends StatelessWidget {
         columnSpacing: 15,
         border: TableBorder.all(),
         columns: const [
-          DataColumn(label: Text("Vol")),
-          DataColumn(label: Text("OI\nChg\n%")),
-          DataColumn(label: Text("OI")),
-          DataColumn(label: Text("Chng\nChng %")),
           DataColumn(label: Text("LTP")),
+          DataColumn(label: Text("Chng\nChng %")),
+          DataColumn(label: Text("OI")),
+          DataColumn(label: Text("OI\nChg\n%")),
+          DataColumn(label: Text("Vol")),
         ],
         rows: buildRows(_data),
       ),
